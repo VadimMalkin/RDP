@@ -1399,7 +1399,8 @@ async def send_message(message, user_message, is_private):
 
 
 def run_discord_bot():
-  load_dotenv()
+  dotenv_path = 'process.env'
+  load_dotenv(dotenv_path=dotenv_path)
   TOKEN = os.environ['TOKEN']
   intents = discord.Intents.all()
   intents.message_content = True
